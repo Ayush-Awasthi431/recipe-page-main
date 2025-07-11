@@ -1,0 +1,116 @@
+:root{
+    --body-color: hsl(14, 74%, 91%);
+    --article-color: white;
+    --sc1-color: hsl(333, 88%, 90%);
+    --border-color: hsl(30, 8%, 60%);
+    --h2-color: hsl(14, 48%, 29%);
+    --sc1-h2-color: hsl(332, 59%, 23%);
+}
+@media(max-width: 600px){
+    html{
+        font-size: 10px;
+    }
+    article{
+        width: 60% !important;
+    }
+}
+*{
+    box-sizing: border-box;
+}
+body,main{
+    margin: 0;
+    background-color: var(--body-color);
+}
+main{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article{
+    width: 30%;
+    min-width: 20rem;
+    background-color: var(--article-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 3rem 0;
+}
+.divider{
+    border-bottom: 1px solid var(--border-color);
+    margin-top: 1.7rem;
+}
+
+/*GENERAL CSS*/
+
+h2:not(.section1>h2){
+    color: var(--h2-color);
+}
+li{
+    margin: 0.5rem;
+    padding-left: 0.5rem;
+}
+li:not(.section1>ul>li)::marker{
+    color: var(--h2-color);
+}
+ul,ol{
+    padding-left: 1rem;
+}
+li,p,table{
+    font-size: 0.8rem;
+}
+
+/*HEADER*/
+
+img{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+h1{
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    margin-top: 1rem;
+}
+
+/*SECTION1*/
+
+.section1{
+    background-color: var(--sc1-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.section1>h2{
+    color: var(--sc1-h2-color);
+    margin: 0;
+    font-size: 1.2rem;
+}
+.section1>ul{
+    margin-bottom: 0;
+}
+.section1>ul>li::marker{
+    color: var(--sc1-h2-color);
+}
+
+/*LAST SECTION*/
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+caption{
+    margin-bottom: 0.5rem;
+}
+td,th{
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.5rem;
+}
+th{
+    text-align: left;
+    font-weight: normal;
+}
+td{
+    color: var(--h2-color);
+    font-weight: bold;
+}
+tr:last-of-type>*{
+    border: none;
+}
